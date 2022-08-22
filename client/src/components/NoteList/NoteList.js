@@ -9,6 +9,7 @@ function NoteList() {
   const dispatch = useDispatch();
 
   const posts = useSelector((state) => state.posts);
+  const user = useSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(getPostsThunk());
@@ -23,7 +24,7 @@ function NoteList() {
           <div className="card" style={{ width: '340px' }}>
            <div className="card-body">
             <h5 className="card-title">{el.title}</h5>
-            <p className="card-date">author: {el.User?.name}</p>
+            <p className="card-date">author: {el.User?.name || user.name}</p>
             <img src={el.pic_url} className="card-img-top" alt="..." style={{ width: '300px' }} />
             <p className="card-text">{el.body}</p>
             <p className="card-date">last changes: {el.updatedAt}</p>
