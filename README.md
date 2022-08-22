@@ -21,22 +21,22 @@ ___
 - Приложение сохраняет и публикует заметки различных пользователей. В качестве заметки может выступать текст с вложением в виде фотографии или картинки. 
 
 
-![start](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/random.png?raw=true)
+![start](https://github.com/alpobaggins/notelist/blob/master/readme-pic/start.png?raw=true)
 - По умолчанию можно только смотреть заметки всех пользователей. Для того, чтобы добавить свою заметку, необходимо зайти на сайт либо зарегистрироваться.  
 
 
-![register](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/without.png?raw=true)
+![register](https://github.com/alpobaggins/notelist/blob/master/readme-pic/register.png?raw=true)
 - После того, как Вы зашли на сайт как зарегистрированный пользователь, можно начинать добавлять заметки. Добавить свою заметку можно с помощью кнопки "Add note" и всплывающей формы. Кроме того, в навигационной панели появляется маленькое приветствие пользователя, а также открывается доступ к личному кабинету, где хранятся только Ваши заметки.
 
 
-![withoutadd](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/favourite.png?raw=true)
-![add](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/favourite.png?raw=true)
+![withoutadd](https://github.com/alpobaggins/notelist/blob/master/readme-pic/withoutadd.png?raw=true)
+![add](https://github.com/alpobaggins/notelist/blob/master/readme-pic/add.png?raw=true)
 - После добавления заметки она тут же отображается на главной странице сайта.
 
 
-![mainpage](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/favourite.png?raw=true)
+![mainpage](https://github.com/alpobaggins/notelist/blob/master/readme-pic/mainpage.png?raw=true)
 - В личном кабинете Вы можете добавить новую заметку, а также отредактировать или удалить уже существующие.
 
 
-![lk](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/favourite.png?raw=true)
-![lkchange](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/favourite.png?raw=true)
+![lk](https://github.com/alpobaggins/notelist/blob/master/readme-pic/lk.png?raw=true)
+![lkchange](https://github.com/alpobaggins/notelist/blob/master/readme-pic/lkwithchange.png?raw=true)
