@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import {useDispatch} from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import {createUserThunk} from '../../redux/actions/user'
 
 function Registration() {
   const [form, setForm] = useState({});
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -14,6 +16,7 @@ function Registration() {
         setForm({});
         e.target.reset();
     }
+    navigate('/');
   }
 
   const handleChange = (e) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -33,9 +36,6 @@ function Registration() {
         <div className="mb-3">
           <p className="form-label">Password</p>
           <input type="password" value={form.password || ''} name="password" onChange={handleChange} className="form-control" id="exampleInputPassword1" />
-        </div>
-        <div className="mb-3 form-check">
-          <input type="checkbox" className="form-check-input" id="exampleCheck1" />
         </div>
         <button type="submit" className="btn btn-outline-danger">Submit</button>
       </form>

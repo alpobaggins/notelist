@@ -13,7 +13,10 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand">posts</Link>
+          <Link to="/" className="navbar-brand">NOTES</Link>
+          {user?.name && (
+          <Link to="/mynotes" className="navbar-brand">my notes</Link>
+          )}
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
@@ -26,7 +29,7 @@ function Navbar() {
                 <Link to="/login" className="nav-link">login</Link>
               </li>)}
               {user?.name && (<li className="nav-item">
-                <Link to="/logout" className="nav-link" onClick={() => {dispatch(logoutUserThunk())}}>logout</Link>
+                <Link to="/" className="nav-link" onClick={() => {dispatch(logoutUserThunk())}}>logout</Link>
               </li>)}
             </ul>
           </div>

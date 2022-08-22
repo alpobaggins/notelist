@@ -5,17 +5,20 @@ import AddPost from './AddPost';
 import EditPost from './EditPost';
 
 
-function NoteList() {
+function MyNoteList() {
 
   const dispatch = useDispatch();
 
+  const user = useSelector((state) => state.user);
+
   const posts = useSelector((state) => state.posts);
+  const myPosts = posts.filter(post => post.author_id === user.id);
 
   useEffect(() => {
     dispatch(getPostsThunk());
   }, []);
 
-  function handleDelete(id) {
+  function handleDelete(id) { 
     dispatch(deletePostThunk(id));
   }
 
@@ -23,8 +26,8 @@ function NoteList() {
     <div>
       <AddPost />
       <div className='all-post-list'>
-      {posts.length !== 0 ? 
-      posts.map((el) => (
+      {myPosts.length !== 0 ? 
+      myPosts.map((el) => (
           <div className="card" style={{ width: '340px' }}>
            <div className="card-body">
             <h5 className="card-title">{el.title}</h5>
@@ -32,6 +35,19 @@ function NoteList() {
             <p className="card-text">{el.body}</p>
             <p className="card-date">last changes: {el.updatedAt}</p>
           </div>
+          <div className="post-menu">
+          <button
+            className="post-button delete"
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleDelete(el.id);
+            }}
+          >
+            &#10008;
+          </button>
+            <EditPost id={el.id}/>
+        </div>
           </div> 
       )
       )    
@@ -40,4 +56,4 @@ function NoteList() {
       </div>
     </div> )}
 
-export default NoteList
+export default MyNoteList

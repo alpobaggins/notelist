@@ -1,3 +1,36 @@
+# notelist app
+Приложение для создания и хранения заметок.
+___
+
+## Основные технологии, используемые в проекте:
+<img align="left" alt="HTML" width="60px" src="https://img.icons8.com/color/344/html-5--v1.png" />
+<img align="left" alt="CSS" width="60px" src="https://img.icons8.com/color/344/css3.png" />
+<img align="left" alt="JavaScript" width="60px" src="https://img.icons8.com/color/344/javascript--v2.png" />
+<img align="left" alt="React" width="60px" src="https://img.icons8.com/color/344/react-native.png" />
+<img align="left" alt="Redux" width="60px" src="https://img.icons8.com/color/344/redux.png" />
+<img align="left" alt="NodeJS" width="60px" src="https://img.icons8.com/fluency/344/node-js.png" />
+<img align="left" alt="Express" width="60px" src="https://stickker.net/wp-content/uploads/2016/01/express.svg_.png" />
+<img align="left" alt="PostgreSQL" width="60px" src="https://img.icons8.com/color/344/postgreesql.png" />
+<img align="left" alt="Bootstrap" width="60px" src="https://img.icons8.com/color/344/bootstrap.png" />
+<br/>
+<br/>
+<br/>
+
+___
+## Что умеет делать данное приложение
+- Приложение сохраняет и публикует заметки различных пользователей. В качестве заметки может выступать текст с вложением в виде фотографии или картинки. 
+
+
+![random joke](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/random.png?raw=true)
+- Если Вам надоели шутки про Чака Норриса, то на отдельной вкладке можно посмотреть шутки не про него. Понравившуюся шутку также можно сохранить либо перейти к следующей шутке. 
+
+
+![without joke](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/without.png?raw=true)
+- Все сохраненные шутки отражаются на отдельной странице. Шутку можно удалять, если вдруг она больше не кажется Вам смешной.
+
+
+![favourites](https://github.com/alpobaggins/random-joke-app/blob/master/readme-pic/favourite.png?raw=true)
+
 # ElbrusNote challenge
 
 ## Введение
