@@ -26,3 +26,7 @@ code {
   font-size: small;
   color: red;
 }
+
+.nav-logout {
+  color: red;
+}

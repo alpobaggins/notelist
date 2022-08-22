@@ -29,6 +29,9 @@ function Navbar() {
                 <Link to="/login" className="nav-link">login</Link>
               </li>)}
               {user?.name && (<li className="nav-item">
+                <span className="nav-link disabled">Hello, {user.name}!</span>
+              </li>)}
+              {user?.name && (<li className="nav-item">
                 <Link to="/" className="nav-link" onClick={() => {dispatch(logoutUserThunk())}}>logout</Link>
               </li>)}
             </ul>

@@ -83,13 +83,12 @@ app.get('/logout', async (req, res) => {
 });
 
 app.get('/post', async (req, res) => {
-  const result = await Post.findAll();
+  const result = await Post.findAll({ order: [['updatedAt', 'DESC']], include: { model: User }});
   res.json(result);
 });
 
 app.post('/post', async (req, res) => {
   const { title, body, pic_url } = req.body;
-  console.log(req.body);
   const { userId } = req.session;
 
   const result = await Post.create({ title, body, pic_url, author_id: userId });
@@ -111,7 +110,7 @@ app.put('/post', async (req, res) => {
     const findPost = await Post.findOne({ where: { id: req.body.id } });
     await findPost.update({ title: req.body.title, body: req.body.body, pic_url: req.body.pic_url });
     await findPost.save();
-    const result = await Post.findAll();
+    const result = await Post.findAll({ order: [['updatedAt', 'DESC']], include: { model: User }});
     res.json(result);
   } catch(err) {
     console.log(err);

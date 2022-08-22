@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import {deletePostThunk, getPostsThunk} from '../../redux/actions/post'
+import {getPostsThunk} from '../../redux/actions/post'
 import AddPost from './AddPost';
-import EditPost from './EditPost';
 
 
 function NoteList() {
@@ -15,10 +14,6 @@ function NoteList() {
     dispatch(getPostsThunk());
   }, []);
 
-  function handleDelete(id) {
-    dispatch(deletePostThunk(id));
-  }
-
   return (
     <div>
       <AddPost />
@@ -28,6 +23,7 @@ function NoteList() {
           <div className="card" style={{ width: '340px' }}>
            <div className="card-body">
             <h5 className="card-title">{el.title}</h5>
+            <p className="card-date">author: {el.User?.name}</p>
             <img src={el.pic_url} className="card-img-top" alt="..." style={{ width: '300px' }} />
             <p className="card-text">{el.body}</p>
             <p className="card-date">last changes: {el.updatedAt}</p>
